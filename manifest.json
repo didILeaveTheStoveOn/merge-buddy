@@ -1,0 +1,16 @@
+{
+  "name": "Merge Buddy",
+  "version": "0.0.1",
+  "description": "Hide MERGE button in PR reviews so that you remember to use labels to merge & deploy",
+  "manifest_version": 2,
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["toggle.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
